@@ -1,0 +1,15 @@
+kayttaja->selain:
+note left of selain
+kayttaja kirjoittaa formin input-kenttään
+talletettavan viestin ja painaa "Talleta"-nappia
+end note
+
+note right of selain
+Requestin mukana menee uusi viesti json-muodossa
+end note
+selain->palvelin: POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+palvelin->selain: status 201, Created
+
+note left of selain
+Selain pysyy samalla sivulla ja muita HTTP-pyyntöjä ei suoriteta.
+end note
